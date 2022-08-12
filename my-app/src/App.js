@@ -1,6 +1,7 @@
 import React from "react";
 import About from "./components/about/About";
-import {BrowserRouter} from 'react-router-dom';
+import Experiences from "./components/experiences/Experiences";
+// import { Route, Routes } from "react-router-dom";
 import Header from "./components/header/Header";
 import Nav from "./components/nav/Nav";
 // import {themeContext} from './Context';
@@ -11,21 +12,26 @@ const App = () => {
   // const darkMode = theme.state.darkMode
 
   return (
-    <BrowserRouter
     //  style={{
     //   background : darkMode ? 'black' : '',
     //   color : darkMode ? 'white' : ''}
     //   }
-    >
-      <Nav />
+    <>
+      
       {/* <Routes>
         <Route path="#" element={<Header />} />
         
         <Route path="#about" element={<About />} />
       </Routes> */}
       <Header />
-      <About />
-    </BrowserRouter>
+      <Nav />
+       <About />
+       <Experiences />
+      {/* <Routes>
+        <Route element={<Header />} index />
+        <Route path="#about" element={<About />} />
+      </Routes> */}
+    </>
   );
 };
 
