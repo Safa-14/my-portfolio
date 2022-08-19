@@ -1,0 +1,75 @@
+/*=======Projects Section==============*/
+.projects_container {
+    display: grid;
+    grid-template-columns: repeat(3,330px);
+    gap: 1.8rem;
+    justify-content: center;
+    padding-top: 1rem;  
+}
+
+.project_filers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .75rem;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    color: var(--color-deepPink);
+}
+.project_item {
+    cursor: pointer;
+    color: var(--color-light);
+    padding: .25rem .75rem;
+    font-weight: 500;  /*font medium*/
+    border-radius: .5rem;
+}
+
+.project_card {
+    background-color: var(--color-light);
+    padding: 1.25rem;
+    border-radius: .5rem;
+}
+
+.portfolio_item-details {
+    display: none;
+}
+
+.project_img {
+    border-radius: .5rem;
+    max-width: 100%;
+    
+    margin-bottom: 1rem;
+}
+
+.project_title {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+}
+
+.project_button{
+    color: var(--color-deepPink);
+    font-size: medium;
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+    cursor: pointer;
+}
+
+.project_button-icon {
+    font-size: 1rem;
+    transition: .3s;
+}
+
+.project_button:hover .project_button-icon{
+    transform: translateX(.25rem);
+}
+
+
+/*Active Item Work */
+.active-project {
+    background-color: var(--color-deepPink);
+    color: black;
+}

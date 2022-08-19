@@ -4,6 +4,7 @@ import Experiences from "./components/experiences/Experiences";
 // import { Route, Routes } from "react-router-dom";
 import Header from "./components/header/Header";
 import Nav from "./components/nav/Nav";
+import Projects from "./components/projects/Projects";
 // import {themeContext} from './Context';
 // import { useContext } from 'react';
 
@@ -27,6 +28,7 @@ const App = () => {
       <Nav />
        <About />
        <Experiences />
+       <Projects />
       {/* <Routes>
         <Route element={<Header />} index />
         <Route path="#about" element={<About />} />
