@@ -1,5 +1,6 @@
 import React from "react";
 import About from "./components/about/About";
+import Contact from "./components/contact/Contact";
 import Experiences from "./components/experiences/Experiences";
 // import { Route, Routes } from "react-router-dom";
 import Header from "./components/header/Header";
@@ -29,6 +30,7 @@ const App = () => {
        <About />
        <Experiences />
        <Projects />
+       <Contact />
       {/* <Routes>
         <Route element={<Header />} index />
         <Route path="#about" element={<About />} />

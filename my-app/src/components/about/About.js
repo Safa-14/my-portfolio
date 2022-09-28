@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import './about.css'
 
 function About() {
+  // const [toggle,setToggle] = useState(false)
+
+  // const toggleFunction = () => {
+  //   setToggle(true)
+  // }
   return (
     <section id="about">
       <h5>Get To Know</h5>
@@ -29,10 +34,19 @@ function About() {
           </p>
         </div>
 
-        <div className="about_me">
-          <div className="about_me-image">
-            <img src="" alt="" />
+        <div className="right_side">
+          <div className="main_img"  >
+            <span className="circle">1</span>
+            <span className="circle">2</span>
+            <span className="circle">3</span>
+            <span className="circle">4</span>
+            <span className="circle">5</span>
+            <span className="circle">6</span>
+            <span className="circle">7</span>
+            <span className="circle">8</span>
+
           </div>
+          <img src="" alt="" />
         </div>
       </div>
     </section>
