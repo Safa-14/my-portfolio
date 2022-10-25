@@ -1,12 +1,7 @@
 import React, { useState } from "react";
-import './about.css'
+import "./about.css";
 
 function About() {
-  // const [toggle,setToggle] = useState(false)
-
-  // const toggleFunction = () => {
-  //   setToggle(true)
-  // }
   return (
     <section id="about">
       <h5>Get To Know</h5>
@@ -14,39 +9,25 @@ function About() {
 
       <div className="container about_container">
         <div className="about__content">
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum,
-            voluptatibus. Enim ratione, dignissimos veritatis similique
-            architecto, unde reiciendis, debitis saepe fugit hic necessitatibus
-            iusto eum ea esse eaque magnam quas.
+        <p>
+            I am a junior full stack developer.
           </p>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
-            facere ipsa, quis vero assumenda libero quia. Laborum reprehenderit
-            saepe aspernatur totam sapiente aut tempore excepturi. Officia ipsa
-            cupiditate blanditiis incidunt?
+            I graduated as Electrical engineer and then changed my path to web development career.
           </p>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
-            facere ipsa, quis vero assumenda libero quia. Laborum reprehenderit
-            saepe aspernatur totam sapiente aut tempore excepturi. Officia ipsa
-            cupiditate blanditiis incidunt?
+            I enjoy programming and making websites.
           </p>
         </div>
 
         <div className="right_side">
-          <div className="main_img"  >
-            <span className="circle">1</span>
-            <span className="circle">2</span>
-            <span className="circle">3</span>
-            <span className="circle">4</span>
-            <span className="circle">5</span>
-            <span className="circle">6</span>
-            <span className="circle">7</span>
-            <span className="circle">8</span>
-
-          </div>
-          <img src="" alt="" />
+          <ul className="main_skills">
+            <li onMouseEnter={(e) => e.target.style.zIndex = '5'}><a href="#">Technologies</a></li>
+            <li onMouseEnter={(e) => e.target.style.zIndex = '4'}><a href="#">Javascipts Frameworks</a></li>
+            <li onMouseEnter={(e) => e.target.style.zIndex = '3'}><a href="#">Databases</a></li>
+            <li onMouseEnter={(e) => e.target.style.zIndex = '2'}><a href="#">Versions Control</a></li>
+            <li onMouseEnter={(e) => e.target.style.zIndex = '1'}><a href="#">Others Skills</a></li>
+          </ul>
         </div>
       </div>
     </section>
@@ -54,4 +35,3 @@ function About() {
 }
 
 export default About;
-
