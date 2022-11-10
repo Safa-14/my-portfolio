@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "./about.css";
+import skills from "../../skills";
 
 function About() {
+
   return (
     <section id="about">
       <h5>Get To Know</h5>
@@ -9,7 +11,7 @@ function About() {
 
       <div className="container about_container">
         <div className="about__content">
-        <p>
+          <p>
             I am a junior full stack developer.
           </p>
           <p>
@@ -22,11 +24,24 @@ function About() {
 
         <div className="right_side">
           <ul className="main_skills">
-            <li onMouseEnter={(e) => e.target.style.zIndex = '5'}><a href="#">Technologies</a></li>
-            <li onMouseEnter={(e) => e.target.style.zIndex = '4'}><a href="#">Javascipts Frameworks</a></li>
-            <li onMouseEnter={(e) => e.target.style.zIndex = '3'}><a href="#">Databases</a></li>
-            <li onMouseEnter={(e) => e.target.style.zIndex = '2'}><a href="#">Versions Control</a></li>
-            <li onMouseEnter={(e) => e.target.style.zIndex = '1'}><a href="#">Others Skills</a></li>
+            {skills.map((skill,index) => (
+              
+              <li 
+              key={skill.id} 
+              style={{zIndex: skill.zIndex
+              }}>
+                {skill.title}
+                <div className="bar_container">
+                  {(skill.technolgiesUsed.map((tech,index) => 
+                    (<div className="bar" key={index} >
+                      <div>{tech}</div>
+                    </div> )
+                  ))}
+                </div>
+              </li>
+
+              ))}
+
           </ul>
         </div>
       </div>

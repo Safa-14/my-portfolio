@@ -44,8 +44,8 @@
     background: #1f5378;
 }
 
-.main_skills>li:hover .bar_container {
-    display: flex;
+.main_skills>li:hover .bar_container>.bar {
+    display: block;
 }
 
 /* Bech na3mlou el bloc eli 3al lisar bel before */
@@ -93,6 +93,21 @@
     filter: brightness(0.9);
 } 
 
+/* .main_skills>li>a {
+    text-decoration: none;
+    color: #999;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+
+.main_skills>li:hover a {
+    color: #fff;
+} */
+
+
 
 .main_skills > li:last-child::after {
 
@@ -106,22 +121,67 @@
     position: absolute;
     width: inherit;
     height: inherit;
-    top: 5px;
+    top: 0;
+    /* left: 0; */
+    display: flex;
     justify-content: right;
-    align-items: center;
-    display: none;
-
+    /* display: none; */
+    /* justify-content: space-around;*/
+    /* flex-direction: row;  */
+    /* margin-left: auto; */
+    /* align-items: flex-end; */
+    /* margin-left: 7px; */
 }
 
-
-.skill {
+.bar_container > .bar{
     position: relative;
-    width: 35px; 
-    height: 35px;
-    font-size: 2rem;
-    margin: 5px;
-    border-radius: 15%;
-
+    display: none;
+    width: 11px; /*40px */
+    height: 100%;
+    bottom: -16px;
+    margin: 9px;
+    /* margin-left: auto; */
+    background-color: #fff;
+    animation: animate 1.2s cubic-bezier(1,0,0.4,1) forwards;
 }
 
+@keyframes animate {
+    100% {
+        height: 100%;
+    }
+}
+.bar_container > .bar::before{
+    content: "";
+    position: absolute;
+    top: -3px; /*-7*/
+    left: -6px; /*-14 */
+    width: 6px;  /*14*/
+    height: 100%;
+    transform: skewY(45deg);
+    transform-origin: top;
+    background-color: #fff;
+}
 
+.bar_container > .bar::after{
+    content: "";
+    position: absolute;
+    top: -6px; /*-14*/
+    left: -6px;  /*-14*/
+    width: 100%;
+    height: 6px;  /*14*/
+    transform: skewX(45deg);
+    transform-origin: top;
+    background-color: #fff;
+}
+/* 
+.bar_container > .bar >.titles {
+    position: absolute;
+    width: 100%;
+    left: 7px;
+    bottom: -70px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    background-color: yellow;
+
+}
+ */
