@@ -31,9 +31,9 @@ const Nav = () => {
   return (
     <>  
       <div className="nav-icon" onClick={updateMenu}>
-        <div className={navClick_class}></div>
-        <div className={navClick_class}></div>
-        <div className={navClick_class}></div>
+        <span className={navClick_class}></span>
+        <span className={navClick_class}></span>
+        <span className={navClick_class}></span>
       </div>
 
       <div className={nav_header}>
